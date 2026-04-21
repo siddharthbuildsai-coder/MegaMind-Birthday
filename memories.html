@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Memories 🐾</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Ctext y="50" font-size="48"%3E🐾%3C/text%3E%3C/svg%3E' />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="pageLoader" class="page-loader"><div class="loader-paw">🐾</div></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="paw-cursor" id="pawCursor" aria-hidden="true">🐾</div>
+  <div class="floating-paws" id="floatingPaws" aria-hidden="true"></div>
+  <nav class="top-nav">
+    <a href="./index.html">Home</a>
+    <a href="./memories.html" class="active">Memories</a>
+    <a href="./surprise.html">Surprise</a>
+    <button id="musicModeToggle" aria-label="Toggle music mode">☕</button>
+  </nav>
+  <button id="backToTop" class="back-top" aria-label="Back to top">🐾</button>
+
+  <main>
+    <section class="section hero compact-hero">
+      <div class="hero-content">
+        <h1>Us, in every frame</h1>
+        <p class="hero-sub-script">every memory still breathing</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="section reveal">
+      <div class="section-head">
+        <h2>Us, in every frame</h2>
+        <p class="scriptline">soft moments, loud love</p>
+      </div>
+      <div class="masonry-wrap">
+        <div id="masonry" class="masonry" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="moodboard" class="section reveal">
+      <div class="section-head">
+        <h2><!-- MOODBOARD TITLE (EDIT ME) -->Everything that is her</h2>
+      </div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="mood-item"><img src="./assets/icon-beach.svg" alt="" /><span>beach</span></div>
+          <div class="mood-item"><img src="./assets/icon-pebble.svg" alt="" /><span>pebbles</span></div>
+          <div class="mood-item"><img src="./assets/icon-coffee.svg" alt="" /><span>coffee</span></div>
+          <div class="mood-item"><img src="./assets/icon-dog.svg" alt="" /><span>dog</span></div>
+          <div class="mood-item"><img src="./assets/icon-window.svg" alt="" /><span>window</span></div>
+          <div class="mood-item"><img src="./assets/icon-wave.svg" alt="" /><span>waves</span></div>
+          <div class="mood-item"><img src="./assets/icon-arch.svg" alt="" /><span>old streets</span></div>
+          <div class="mood-item"><img src="./assets/icon-breeze.svg" alt="" /><span>sea breeze</span></div>
+          <div class="mood-item"><img src="./assets/icon-beach.svg" alt="" /><span>beach</span></div>
+          <div class="mood-item"><img src="./assets/icon-pebble.svg" alt="" /><span>pebbles</span></div>
+          <div class="mood-item"><img src="./assets/icon-coffee.svg" alt="" /><span>coffee</span></div>
+          <div class="mood-item"><img src="./assets/icon-dog.svg" alt="" /><span>dog</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-paw" aria-hidden="true">🐾</div>
+    <p>For every memory behind us, and every one still waiting.</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button id="lightboxMute" class="lightbox-mute" aria-label="Mute audio">🔊</button>
+    <div id="lightboxCounter" class="lightbox-counter"></div>
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">×</button>
+    <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous image">❮</button>
+    <img id="lightboxImage" src="" alt="Memory photo" />
+    <div id="lightboxCollage" class="lightbox-collage hidden">
+      <img src="" alt="Collage memory 1" />
+      <img src="" alt="Collage memory 2" />
+      <img src="" alt="Collage memory 3" />
+      <img src="" alt="Collage memory 4" />
+    </div>
+    <button id="lightboxNext" class="lightbox-nav next" aria-label="Next image">❯</button>
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+
+  <audio id="chorusAudio" src="./audio/song.mp3" preload="none" loop></audio>
+  <audio id="kpopAudio" src="./audio/kpop.mp3" preload="none" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>

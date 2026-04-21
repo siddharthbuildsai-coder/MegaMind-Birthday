@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Surprise ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Ctext y="50" font-size="48"%3E🐾%3C/text%3E%3C/svg%3E' />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="pageLoader" class="page-loader"><div class="loader-paw">🐾</div></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="paw-cursor" id="pawCursor" aria-hidden="true">🐾</div>
+  <div class="floating-paws" id="floatingPaws" aria-hidden="true"></div>
+  <nav class="top-nav">
+    <a href="./index.html">Home</a>
+    <a href="./memories.html">Memories</a>
+    <a href="./surprise.html" class="active">Surprise</a>
+    <button id="musicModeToggle" aria-label="Toggle music mode">☕</button>
+  </nav>
+  <button id="backToTop" class="back-top" aria-label="Back to top">🐾</button>
+
+  <main>
+    <section class="section hero compact-hero">
+      <div class="hero-content">
+        <h1>A little secret, just for you</h1>
+        <p class="hero-sub-script">a message across the sea</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="surprise-card">
+        <div id="voiceLockStage" class="lock-stage">
+          <div class="sealed-envelope">
+            <span class="ribbon"></span>
+            <span id="padlock" class="padlock">🔒</span>
+          </div>
+          <p><strong>Voice note unlocks in:</strong> <span id="voiceUnlockCountdown">0d 0h 0m 0s</span></p>
+          <p title="Some things are worth waiting for 🤍">Some things are worth waiting for 🤍</p>
+        </div>
+
+        <div id="voiceUnlockedStage" class="surprise-content hidden">
+          <h2>Chapter 21: The Message Across the Sea</h2>
+          
+          <!-- Photo Frames -->
+          <div class="surprise-photos">
+            <article class="surprise-photo-frame">
+              <img src="./assets/golder-retriever-1.jpg" alt="Golden Retriever" loading="lazy" />
+              <h3>Golden Retriever Energy</h3>
+              <p>Soft eyes, loyal heart, and endless warmth</p>
+            </article>
+            <article class="surprise-photo-frame">
+              <img src="./assets/coffee-korean-bun.jpg" alt="Coffee and Korean Bun" loading="lazy" />
+              <h3>Walks, Coffee & Korean Bun</h3>
+              <p>Beach walks with dogs, coffee mornings, and sweet buns</p>
+            </article>
+          </div>
+          
+          <div class="manga-panels">
+            <article class="panel">
+              <div class="speech" data-config="voiceNoteOpeningLine">[OPENING LINE OF VOICE NOTE]</div>
+              <div class="me-frame">
+                <img src="./assets/me-onepiece.png" alt="One Piece illustration of me" loading="lazy" />
+              </div>
+            </article>
+            <article class="panel">
+              <h3 class="panel-title">Somewhere across the sea...</h3>
+              <div class="wave-bars"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+            <article class="panel"><div style="font-size:2rem;text-align:center;">🐾 ☕</div></article>
+            <article class="panel full">
+              <button class="jolly-btn" id="openSurpriseBtn" type="button">☠ PRESS PLAY, TANISHA ☠</button>
+              <p class="type-note" id="typeNote" data-note="You are my favorite chapter, my safest place, and my happiest tomorrow."></p>
+              <audio id="voiceNote" controls preload="none">
+                <source src="./audio/Birthday wishes.m4a" type="audio/mp4" />
+              </audio>
+              <div class="wave-bars"><span></span><span></span><span></span><span></span><span></span></div>
+            </article>
+          </div>
+          <p class="ps-note">P.S. — <span data-config="voiceNotePostscript">[P.S. NOTE]</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-paw" aria-hidden="true">🐾</div>
+    <p>You are, and always will be, my sweetest surprise.</p>
+  </footer>
+
+  <audio id="kpopAudio" src="./audio/kpop.mp3" preload="none" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
